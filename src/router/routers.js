@@ -55,7 +55,7 @@ export const constantRouterMap = [
         path: 'dashboard',
         component: () => import('@/views/home'),
         name: '首页',
-        meta: { title: '首页', icon: 'index', noCache: true, affix: true }
+        meta: { title: '首页', icon: 'student_overview.vue', noCache: true, affix: true }
       }
     ]
   },
@@ -70,6 +70,26 @@ export const constantRouterMap = [
         component: () => import('@/views/system/user/center'),
         name: '个人中心',
         meta: { title: '个人中心', icon: 'user' }
+      }
+    ]
+  },
+  {
+    path: '/stureport',
+    component: Layout,
+    hidden: true,
+    redirect: 'noredirect',
+    children: [
+      {
+        path: 'overall/index',
+        component: () => import('@/views/report/overall/index'),
+        name: '整体概览',
+        meta: { title: '整体概览', icon: 'user' }
+      },
+      {
+        path: 'persondata/person',
+        component: () => import('@/views/report/persondata/person'),
+        name: '学员概览',
+        meta: { title: '学员概览', icon: 'user' }
       }
     ]
   }
