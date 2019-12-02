@@ -3,7 +3,7 @@
     <el-tabs type="border-card">
       <el-tab-pane label="学习数据概览">
         <div>
-          <selectlist/>
+          <selectlist :datalist="optionsItems" />
           <div style="clear: both"/>
         </div>
         <div class="chartContainer" style="margin-top:20px;">
@@ -50,6 +50,56 @@ export default {
         { code: '', desc: '累计做题题量', content: '37,685,870' },
         { code: '', desc: '做题知识点数', content: '5417' },
         { code: '', desc: '课程数', content: ' 2,370,299' }
+      ],
+      optionsItems: [{
+        apicode: 'getSchoolName',
+        label: '校区',
+        options: [
+          { id: 1, value: '选项1' },
+          { id: 2, value: '选项2' },
+          { id: 3, value: '选项3' },
+          { id: 4, value: '选项4' }
+        ]
+      },
+      {
+        apicode: 'getUserName',
+        label: '用户名',
+        options: [
+          { id: 1, value: '选项1' },
+          { id: 2, value: '选项2' },
+          { id: 3, value: '选项3' },
+          { id: 4, value: '选项4' }
+        ]
+      },
+      {
+        apicode: 'getCourseName',
+        label: '课程',
+        options: [
+          { id: 1, value: '选项1' },
+          { id: 2, value: '选项2' },
+          { id: 3, value: '选项3' },
+          { id: 4, value: '选项4' }
+        ]
+      },
+      {
+        apicode: 'getLessonName',
+        label: '课次',
+        options: [
+          { id: 1, value: '选项1' },
+          { id: 2, value: '选项2' },
+          { id: 3, value: '选项3' },
+          { id: 4, value: '选项4' }
+        ]
+      }, {
+        apicode: 'getTopticName',
+        label: '专题',
+        options: [
+          { id: 1, value: '选项1' },
+          { id: 2, value: '选项2' },
+          { id: 3, value: '选项3' },
+          { id: 4, value: '选项4' }
+        ]
+      }
       ]
     }
   },
